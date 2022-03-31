@@ -173,7 +173,7 @@ class IE11(Dependency):
                 "Failed to apply on or more IE11 registry settings. "
                 f"Script return errors. {res.get('stderr')}"
             )
-        self._run_once()
+        #self._run_once()
 
     def _run_win10(self):
         log.debug("Applying settings to optimize IE11")

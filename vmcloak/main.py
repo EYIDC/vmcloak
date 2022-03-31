@@ -118,7 +118,7 @@ _iso_attributes = [
     click.option("--iso-mount", help="Mounted ISO Windows installer image."),
     click.option("--serial-key", help="Windows Serial Key."),
     click.option("--product", help="Windows 7 product version."),
-    click.option("--python-version", help="Python version to install on VM."),
+    click.option("--python-version",default="3.7.3", help="Python version to install on VM."),
 ]
 
 def _add_install_attr(func):

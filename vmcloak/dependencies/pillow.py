@@ -25,11 +25,6 @@ class Pillow(Dependency):
 
     def run(self):
         self.upload_dependency("C:\\pillow.exe")
-        self.a.execute("C:\\pillow.exe", cucksync=True)
-        self.a.click("Setup", "&Next >")
-        self.a.click("Setup", "&Next >")
-        self.a.click("Setup", "&Next >")
-        self.a.click("Setup", "Finish")
-
+        self.a.execute('c:\\Windows\\system32\\cmd.exe /c echo Set objShell = WScript.CreateObject("WScript.Shell") > C:\\SendEnter.vbs & echo objShell.sendKeys "{Enter}" >> C:\\SendEnter.vbs & echo objShell.sendKeys "{Enter}" >> C:\\SendEnter.vbs & echo objShell.sendKeys "{Enter}" >> C:\\SendEnter.vbs & echo WScript.Sleep(3000) >> C:\\SendEnter.vbs & echo objShell.sendKeys "{Enter}" >> C:\\SendEnter.vbs & cscript //nologo C:\\SendEnter.vbs | C:\\pillow.exe', cucksync=True)
         self.wait_process_exit("pillow.exe")
         self.a.remove("C:\\pillow.exe")
